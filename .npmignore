@@ -2,7 +2,8 @@ src
 build
 node_modules
 
-index.js
+index.ts 
 
 .gitignore
+tsconfig.json
 package-lock.json

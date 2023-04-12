@@ -1,4 +1,5 @@
 import chalk from "chalk";
+import { LoggerConfig } from "./types/global";
 const _log = console.log;
 
 const LEVEL = {
@@ -73,7 +74,7 @@ class Logger {
 
     i(...args: string[]) {
         const prefix = `${this._appName}${this._getShowLevel("I")}`;
-        _log(this._c.bgBlueBright(prefix, ...args));
+        _log(this._c.blueBright(prefix, ...args));
         return this;
     }
 
