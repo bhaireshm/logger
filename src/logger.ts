@@ -1,13 +1,12 @@
 import chalk from "chalk";
-import { LoggerConfig } from "./types/global";
 const _log = console.log;
 
 const LEVEL = {
-    I: "[INFO]",
-    E: "[ERROR]",
-    W: "[WARNING]",
-    S: "[SUCCESS]",
-    L: "[LOG]"
+    I: "INFO",
+    E: "ERROR",
+    W: "WARNING",
+    S: "SUCCESS",
+    L: "LOG"
 }
 
 class Logger {
@@ -17,9 +16,10 @@ class Logger {
 
     constructor(args?: any) {
         this._c = new chalk.Instance();
-        this._appName = "[@bhai/logger]";
+        this._appName = "";
         this._config = {
             showLevel: false,
+            levelFormat: "[{value}]",
             appName: this._appName
         };
 
@@ -57,7 +57,8 @@ class Logger {
 
     _getShowLevel(lvl: string) {
         if (!lvl) return this.e("Level is required!!!");
-        return this._config.showLevel ? ` ${LEVEL[lvl]}` : "";
+        const level = this._config.levelFormat.replace("{value}", LEVEL[lvl]);
+        return this._config.showLevel ? ` ${level}` : "";
     }
 
     e(...args: string[]) {
