@@ -4,9 +4,7 @@
   "description": "Logger",
   "private": false,
   "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "source": "src/index.js",
-  "types": "src/index.d.ts",
+  "types": "src/types/global.d.ts",
   "scripts": {
     "c": "rimraf dist && tsc",
     "test": "npm run c && node src/test.js",
@@ -14,9 +12,9 @@
   },
   "keywords": [
     "bhairesh",
-    "logger"
+    "log"
   ],
-  "author": "bhairesh97@gmail.com",
+  "author": "bhairesh@arithaconsulting.com",
   "license": "ISC",
   "devDependencies": {
     "typescript": "^5.0.3"
@@ -25,13 +23,14 @@
     "chalk": "4.1.2"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "repository": {
     "url": "https://github.com/bhaireshm/logger/"
   },
   "bugs": {
-    "email": "bhairesh97@gmail.com",
+    "email": "bhairesh@arithaconsulting.com",
     "url": "https://github.com/bhaireshm/logger/issues"
   }
 }

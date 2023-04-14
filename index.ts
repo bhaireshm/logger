@@ -1,2 +1,2 @@
 export { default } from "./src/logger";
-export type { LoggerConfig } from './src/types/global';
+export * as LoggerType from './src/types/global';

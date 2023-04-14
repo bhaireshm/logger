@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    // "module": "commonjs",
+    "module": "commonjs",
     "esModuleInterop": true,
     // "target": "ES2015",
     // "moduleResolution": "node",
     "sourceMap": false,
-    "outDir": "dist/",
+    "outDir": "dist",
     "removeComments": false,
     "declaration": true,
     "declarationDir": "dist"
